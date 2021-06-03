@@ -1,0 +1,29 @@
+.loginIMG{
+
+    height: 20px;
+    margin:3px;   
+}
+
+.buttonForm{
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 25px;
+}
+
+.button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.buttonForm:hover{
+    box-shadow: 1px 1px 5px 1px rgb(221, 131, 47);
+}
+.button:focus{
+    outline: 0;
+}
+.card-section{
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
