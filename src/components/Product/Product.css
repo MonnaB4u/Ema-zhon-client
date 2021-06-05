@@ -10,10 +10,16 @@
     font-weight: 400;
 }
 .main-button{
-    background-color: goldenrod;
+    background-color: rgb(83, 231, 24);
     width: 150px;
     height: 30px;
     border: 1px solid darkgray;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.main-button:hover{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 1s ease infinite;
 }

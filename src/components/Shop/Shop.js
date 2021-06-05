@@ -5,6 +5,7 @@ import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -50,7 +51,11 @@ const Shop = () => {
     }
 
     return (
+        <div>
+
+      <Header></Header>
         <div className="twin-container">
+            
             <div className="product-container">
                 {
                     products.map(pd => <Product 
@@ -69,6 +74,7 @@ const Shop = () => {
                </Cart>
             </div>
             
+        </div>
         </div>
     );
 };

@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 import happyImage from '../../images/giphy.gif';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../App';
+import Header from '../Header/Header';
 
 const Review = () => {
 
@@ -46,7 +47,10 @@ const Review = () => {
         
     } 
     return (
+        <div>
+            <Header></Header>
         <div className="twin-container">
+            
             <div className="product-container">
                 {
                     cart.map(pd => <ReviewItem 
@@ -61,6 +65,7 @@ const Review = () => {
                     <button onClick={handleProceedCheckout} className="main-button">Proceed Checkout</button>
                 </Cart>
             </div>
+        </div>
         </div>
     );
 };

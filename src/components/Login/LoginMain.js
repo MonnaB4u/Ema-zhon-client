@@ -66,8 +66,8 @@ const LoginMain= () => {
     }
     return (
 
-        <div>
-        <div className="login d-flex justify-content-center">
+        <div className="body">
+        <div className="login d-flex justify-content-center ">
             <div className="row">
                 <div className="my-4">
                     <Link to="/"><img src="{logo}" height="70" alt="" /></Link>
@@ -75,8 +75,8 @@ const LoginMain= () => {
             </div>
         </div>
 
-        <div className="d-flex justify-content-center align-items-center my-5" style={{height:'300px'}}>
-            <div className="card mt-5 p-5 d-flex justify-content-center align-items-center" >
+        <div className=" d-flex justify-content-center align-items-center my-5" style={{height:'300px'}}>
+            <div className="card mt-5 p-5 d-flex justify-content-center align-items-center loginbanner" >
                 <div className="card-body ">
                     <h3>Login With</h3>
                 </div>

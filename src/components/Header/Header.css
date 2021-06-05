@@ -2,12 +2,15 @@
     height: 80px;
 }
 .header{
-    text-align: center;
+    text-align: center; 
 }
 .header nav{
-    background-color: black;
+    /* background-color: rgb(51, 189, 16); */
     line-height: 40px;
     font-size: 20px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 nav a{
     text-decoration: none;
@@ -17,4 +20,20 @@ nav a{
 }
 nav a:hover{
     background-color: gray;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 1s ease infinite;
+    border-radius: 5px;
 }
+
+.logos{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+padding: 10px 2px 1px 1px;
+margin: 2px;
+border-radius: 10px;
+}
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
