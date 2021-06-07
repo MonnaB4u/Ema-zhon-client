@@ -9,54 +9,65 @@ const Inventory = () => {
 
     const { register, handleSubmit, errors } = useForm();
 
+    // const onSubmit = data => {
+    //     fetch('http://localhost:5000/addProduct', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(data)
+    //     }).then(success => {
+    //         if (success) {
+    //             alert("Uploaded successfully");
+    //         }
+    //     })
+
+    // }
     const onSubmit = data => {
+
         fetch('http://localhost:5000/addProduct', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(data)
-        }).then(success => {
-            if (success) {
-                alert("Uploaded successfully");
-            }
         })
-      
-    }
+            .then(success => {
+
+                if (success) {
+
+                    alert('your order placed successfully');
+                }
+            })
+    };
+
     return (
 
         <div className="row ml-5">
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="ship-form mr-5" onSubmit={handleSubmit(onSubmit)}>
 
-            <div className="form-group">
-                <input type="text" {...register('key', { required: true })} name="key" placeholder="Please Input Product Key" className="form-control" />
-            </div>
+                <input name="key" ref={register({ required: true })} placeholder="Please Input Product Key" />
+                {errors.key && <span className="error">Key is required</span>}
 
-            <div className="form-group">
-                <input type="text" {...register('name', { required: true })} name="name" placeholder="input Product Name" className="form-control" />
-            </div>
+                <input name="name" ref={register({ required: true })} placeholder="input Product Name" />
+                {errors.name && <span className="error">Product Name is required</span>}
 
-            <div className="form-group">
-                <input type="text" {...register('price', { required: true })} name="price" placeholder="Input Product Price" className="form-control" />
-            </div>
+                <input type="number" name="price" ref={register({ required: true })} placeholder="Input Product Price" />
+                {errors.price && <span className="error">Product Price is required</span>}
 
-            <div className="form-group">
-                <input type="text" {...register('shipping', { required: true })} name="shipping" placeholder="Input Shipping Price" className="form-control" />
-            </div>
+                <input name="seller" ref={register({ required: true })} placeholder="Input Seller Name" />
+                {errors.seller && <span className="error">Seller Name is required</span>}
 
-            <div className="form-group">
-                <input type="text" {...register('img', { required: true })} name="img" placeholder="Input Image Link" className="form-control" />
-            </div>
+                <input type="number" name="shipping" ref={register({ required: true })} placeholder="Input Shipping Price" />
+                {errors.shipping && <span className="error">Shipping Price is required</span>}
 
+                <input name="img" ref={register({ required: true })} placeholder="Input Image Link" />
+                {errors.img && <span className="error">Image Link is required</span>}
 
+                <input type="submit" />
 
+            </form>
 
-            <div className="form-group text-centet ml-0 mt-5">
-                <button type="submit" class="btn btn-warning">Send</button>
-            </div>
-        </form>
-
-
-    </div>
+        </div>
     );
 };
 

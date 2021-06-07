@@ -31,12 +31,12 @@ function App(props) {
       {/* <Header></Header> */}
         <Switch>
        
-          <PrivateRoute path="/shop"> <Shop></Shop> </PrivateRoute>
+          <Route path="/shop"> <Shop></Shop> </Route>
           <Route path="/review"> <Review></Review> </Route>
           <Route path="/inventory"> <Inventory></Inventory> </Route>
           <Route path="/login">  <LoginMain></LoginMain> </Route>
           <Route path="/shipment">  <Shipment></Shipment> </Route>
-          <PrivateRoute exact path="/">  <Shop></Shop> </PrivateRoute>
+          <Route exact path="/">  <Shop></Shop> </Route>
           <Route path="/product/:productKey"> <ProductDetail></ProductDetail> </Route>
           <Route path="/admin"><Admin></Admin> </Route>
           <Route path="/addProduct"><AddProduct></AddProduct> </Route>
